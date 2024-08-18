@@ -1,0 +1,1401 @@
+/** ROOT */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-shadow: 2px 4px 9px rgba(69, 66, 66, 0.6);
+}
+:root {
+  /*todo FONT FAMILY */
+  /*? REGULAR */
+  --la-font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --la-font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+  --la-font-family-open-sans: 'Open Sans', system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Helvetica Neue', sans-serif;
+}
+
+/** FONTS */
+/** CASLON */
+@font-face {
+  font-family: caslon-antique;
+  src: url(./fonts/CaslonAntique.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: caslon-regular;
+  src: url(./fonts/ACaslonPro-Regular.otf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/** METAL LORD */
+@font-face {
+  font-family: metal-lord;
+  src: url(./fonts/Metal\ Lord.otf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/** SPRINT RUNNER */
+@font-face {
+  font-family: sprint-runner;
+  src: url(./fonts/sprint-runner-demo/SprintRunnerDemoRegular.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/** RECHARGE */
+@font-face {
+  font-family: recharge;
+  src: url(./fonts/recharge/recharge\ bd.otf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/** GLITCH-ESPORTS */
+@font-face {
+  font-family: glitch-esports;
+  src: url(./fonts/glitch-esports-demo/glitch-esports-demo.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/** BRACKLEY */
+@font-face {
+  font-family: brackley;
+  src: url(./fonts/brackley-demo/BrackleyDemoRegular.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/** FIALIGA-FREE */
+@font-face {
+  font-family: fialiga-free;
+  src: url(./fonts/Fialiga-Free/fiaglia-free.otf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/** FICTICCIA-COLLEGE */
+@font-face {
+  font-family: ficticcia-college;
+  src: url(./fonts/ficticcia-college/Ficticcia-college.otf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/** KNOCK-DOWN */
+@font-face {
+  font-family: knock-down;
+  src: url(./fonts/knock-down/Knock-Down-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/** PLAY-AND-WIN */
+@font-face {
+  font-family: play-and-win;
+  src: url(./fonts/play-and-win-demo/PlayAndWinDemoRegular.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/** ROYDEN */
+@font-face {
+  font-family: royden;
+  src: url(./fonts/royden-demo/RoydenDemoRegular.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/** SOSIAL-JUSTICE */
+@font-face {
+  font-family: sosial-justice;
+  src: url(./fonts/sosial-justice-demo/SosialJusticeDemoRegular.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/** THE-ROCKERS */
+@font-face {
+  font-family: the-rockers;
+  src: url(./fonts/the-rockers/the-rockers.otf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/** THERTOLE */
+@font-face {
+  font-family: thertole;
+  src: url(./fonts/thertole/Thertole-PersonalUse.otf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/** UNIVERSIDAD */
+@font-face {
+  font-family: universidad;
+  src: url(./fonts/universidad-personal-use/universidad-personal-use.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/** GENERAL */
+/*todo LINKS */
+a {
+  all: unset;
+  cursor: pointer;
+}
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+/*! GRID */
+/* .grid {
+  display: grid;
+} */
+/*! FLEX  */
+/*todo FLEX CONTAINER IN-LINE */
+.flex-container-in-line {
+  display: flex;
+}
+/*todo FLEX CONTAINER COLUMN */
+.flex-container-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/*! HEADER */
+/*todo GENERAL */
+header {
+  position: fixed;
+  top: 0px;
+  height: 440px;
+  width: 100%;
+  overflow: hidden;
+  z-index: 100;
+}
+h1 {
+  display: none;
+}
+#blue-logo {
+  width: 40px;
+  height: 30px;
+
+  filter: drop-shadow(7px 9px 7px #451111);
+}
+#full-logo {
+  width: 250px;
+
+  filter: drop-shadow(7px 9px 5px #4d1515);
+}
+#full-logo:hover {
+  scale: 1.3;
+  rotate: 360deg;
+  transition: all 0.5s ease;
+}
+
+/*todo HEADER UP CONTAINER */
+.header-up-container {
+  width: 100%;
+  justify-content: space-around;
+  padding: 20px;
+
+  background-image: url(https://res.cloudinary.com/dd0zwrz0b/image/upload/v1723230186/Liga%20Alarmitas/cesped_auzl_fjnobi.png);
+  background-size: cover;
+  /* background: linear-gradient(
+    148deg,
+    rgba(186, 237, 237, 1) 0%,
+    rgba(13, 170, 252, 1) 23%,
+    rgba(0, 68, 249, 1) 100%
+  ); */
+}
+.hot-news-container {
+  align-items: center;
+}
+.hot-news-container > p {
+  width: 100%;
+  padding-bottom: 5px;
+  text-align: center;
+
+  font-family: recharge, var(--la-font-family-sans-serif);
+  color: #641f1f;
+
+  /* text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff; */
+
+  /* color: #fff; */
+  /* letter-spacing: -7px; */
+  /* font-weight:700; */
+  text-transform: uppercase;
+  animation: blur 0.75s ease-out infinite;
+  text-shadow: 0px 0px 5px #641f1f, 0px 0px 7px #641f1f;
+}
+
+@keyframes blur {
+  from {
+    text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 25px #fff,
+      0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff,
+      0px 0px 25px #fff, 0px 0px 50px #fff, 0px 0px 50px #fff,
+      0px 0px 50px #641f1f, 0px 0px 150px #641f1f, 0px 10px 100px #641f1f,
+      0px 10px 100px #641f1f, 0px 10px 100px #641f1f, 0px 10px 100px #641f1f,
+      0px -10px 100px #641f1f, 0px -10px 100px #641f1f;
+  }
+}
+
+.hot-news-container > p > span {
+  /* filter: drop-shadow(5px -5px 5px #832222e1); */
+  animation: blur 0.75s ease-out infinite;
+  text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+}
+.hot-news-slider {
+  width: 300px;
+  border-radius: 50px;
+  outline: 2px solid rgb(98, 23, 23);
+
+  filter: drop-shadow(0px 0px 15px #f5e5e5);
+  overflow: hidden;
+
+  /* opacity: 1;
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(0, 0, 0, 0.4)));
+  -webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+  -moz-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8); */
+}
+.slider-images-container {
+  width: 300px;
+  height: 100px;
+  border-radius: 50px;
+  animation: slidering 18s infinite linear;
+}
+.hot-news-image {
+  width: 300px;
+  max-height: 100px;
+}
+
+/*? SLIDER (HOT NEWS) EFFECT */
+
+@keyframes slidering {
+  0%,
+  23%,
+  100% {
+    margin-left: 0;
+  }
+  28%,
+  38% {
+    margin-left: -100%;
+  }
+  43%,
+  53% {
+    margin-left: -200%;
+  }
+  58%,
+  68% {
+    margin-left: -300%;
+  }
+  73%,
+  83% {
+    margin-left: -400%;
+  }
+  88%,
+  99.9998% {
+    margin-left: -500%;
+  }
+  99.9999% {
+    margin-left: -600%;
+  }
+}
+
+/*todo MENÚ */
+header > nav {
+  width: 100%;
+  height: 50px;
+
+  background-image: url(https://res.cloudinary.com/dd0zwrz0b/image/upload/v1723752730/Liga%20Alarmitas/Logos_copia_dldwck.png);
+  background-size: cover;
+  background-position: bottom;
+  /* background: radial-gradient(
+    circle,
+    rgba(113, 1, 12, 1) 0%,
+    rgba(235, 67, 91, 1) 100%
+  ); */
+
+  border-top: 2px inset black;
+  border-bottom: 4px inset black;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+
+  -webkit-box-shadow: 0px 0px 17px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 17px 5px rgba(0, 0, 0, 0.75);
+}
+
+header > nav > ul > li > a > p {
+  text-shadow: 4px 8px 5px rgba(0, 0, 0, 0.6);
+}
+nav > ul > li > a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  text-wrap: nowrap;
+  border-radius: 20px;
+  transition: all 300ms ease;
+}
+nav > ul > li > a:hover {
+  transform: scale(1.3);
+  color: #03f8fc;
+  background: #641919c1;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.link-with-submenu:hover > a {
+  transform: scale(1.3);
+  color: #03f8fc;
+  background: #641919c1;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+#blue-logo:hover {
+  transform: scale(1.3);
+  transition: all 0.4s ease;
+}
+.menu {
+  height: 100%;
+  justify-content: center;
+
+  align-items: center;
+  gap: 20px;
+  row-gap: 0;
+
+  font-family: ficticcia-college;
+  font-size: 18px;
+  letter-spacing: 0.05rem;
+  color: rgb(248, 248, 250);
+}
+
+/*todo SUBMENU */
+.submenu {
+  /* background: linear-gradient(
+    158deg,
+    rgba(245, 153, 153, 1) 21%,
+    rgba(210, 77, 90, 1) 61%,
+    rgba(191, 24, 24, 1) 100%
+  ); */
+  background-image: url(https://res.cloudinary.com/dd0zwrz0b/image/upload/v1723752730/Liga%20Alarmitas/Logos_copia_dldwck.png);
+  background-size: cover;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 100%;
+  height: auto;
+  position: absolute;
+  top: 220px;
+  right: 0px;
+
+  font-family: recharge, var(--la-font-family-open-sans);
+  border: 2px solid black;
+
+  padding: 14px 0px;
+  visibility: hidden;
+  border-radius: 20px;
+  opacity: 0;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  transition: all 300ms ease;
+}
+nav ul li:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+}
+nav ul li ul li a {
+  display: block;
+  color: #ffffff;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 14px;
+  letter-spacing: 0.05rem;
+  text-shadow: 4px 8px 5px rgba(0, 0, 0, 0.6);
+  transition: all 300ms ease;
+}
+nav ul li ul li a:hover {
+  background: #0074c7;
+  background: linear-gradient(
+    335deg,
+    rgba(0, 7, 102, 1) 0%,
+    rgba(74, 55, 251, 1) 52%,
+    rgba(2, 173, 238, 1) 100%
+  );
+  color: #fff;
+  border-radius: 20px;
+  transform: scale(1.1);
+  font-size: 16px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.link-with-submenu:hover > a {
+  transform: scale(1.3);
+  color: #03f8fc;
+  background: #641919c1;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/*! MAIN */
+/*todo GENERAL */
+main {
+  padding-top: 200px;
+  background-image: url(https://res.cloudinary.com/dd0zwrz0b/image/upload/v1723857662/Liga%20Alarmitas/fondo-futbol-abstracto-realista_52683-67580_f0qi9y.avif);
+  background-size: cover;
+  background-position: right;
+  background-attachment: fixed;
+}
+
+/*todo LANDING SECTION */
+section:first-of-type {
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  /* padding-top: 50px; */
+}
+#red-logo {
+  width: 70px;
+  height: 55px;
+
+  margin-bottom: 30px;
+
+  filter: drop-shadow(3px 3px 5px #fff);
+}
+.landing-section-container {
+  /* min-width: 100%; */
+  padding-top: 30px;
+
+  background-image: url(https://res.cloudinary.com/dd0zwrz0b/image/upload/v1723848515/Liga%20Alarmitas/9_ncm0wo.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: bottom left;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  border: 3px solid #641f1f;
+  border-radius: 10px;
+
+  -webkit-box-shadow: 4px 9px 24px 7px rgba(219, 219, 222, 1);
+  -moz-box-shadow: 4px 9px 24px 7px rgba(219, 219, 222, 1);
+  box-shadow: 4px 9px 24px 7px rgba(219, 219, 222, 1);
+}
+.landing-section-collage {
+  position: relative;
+  /* max-height: 400px; */
+  padding: 45px 20px 0 20px;
+  padding-top: 5px;
+
+  justify-content: space-between;
+  align-items: center;
+  text-align: start;
+  /* rotate: -10deg; */
+
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+.landing-section-collage h2 {
+  width: 100%;
+  align-self: start;
+  padding-top: 50px;
+
+  font-family: recharge, var(--la-font-family-sans-serif);
+  font-size: 46px;
+  filter: drop-shadow(0px 0px 20px whitesmoke);
+  /* color: black; */
+  /* text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; */
+
+  background-image: url(assets/gift-rojo.gif);
+  background-size: contain;
+  background-position: bottom right;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.landing-section-collage h2 > span {
+  font-family: universidad, var(--la-font-family-open-sans);
+  font-size: 50px;
+  /* text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; */
+}
+.landing-section-collage h2 > sup {
+  font-size: 18px;
+  font-family: var(--la-font-family-open-sans);
+  /* color: whitesmoke; */
+  /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+}
+.landing-section-collage > p {
+  align-self: end;
+  width: 50%;
+  padding-bottom: 20px;
+  /* rotate: -15deg; */
+
+  font-family: recharge, var(--la-font-family-open-sans);
+  color: rgb(132, 238, 249);
+  font-size: 22px;
+  text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
+}
+.landing-section-collage > p > span {
+  font-family: metal-lord, var(--la-font-family-open-sans);
+  color: #641f1f;
+  font-size: 30px;
+  text-shadow: -1px 0 #fff, 0 4px #fff, 1px 0 #fff, 0 -1px #fff;
+}
+#logo-vintage {
+  /* position: absolute;
+  left: 10%;
+  bottom: -35%; */
+
+  max-height: 10rem;
+  max-width: 10rem;
+  margin-bottom: 50px;
+  align-self: end;
+
+  rotate: -20deg;
+  filter: drop-shadow(10px 10px 20px #fff);
+}
+#poster-players {
+  max-height: 400px;
+  max-width: 400px;
+  /* min-height: 200px; */
+  filter: drop-shadow(10px 10px 15px #fff);
+  cursor: help;
+  transition: all 0.5s ease;
+}
+#poster-players:hover {
+  transform: scale(1.5);
+  filter: drop-shadow(0px 0px 30px #fff) brightness(120%);
+}
+
+/*todo RULES SECTION */
+section:nth-of-type(2) {
+  padding: 100px 0;
+  margin: 100px 0;
+  height: fit-content;
+
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+
+  background-image: url(https://res.cloudinary.com/dd0zwrz0b/image/upload/v1723937966/Liga%20Alarmitas/6ef012047dd48fdc84b796984957b4c2_sukgrj.jpg);
+}
+.section-title-with-line {
+  justify-content: center;
+  gap: 10px;
+}
+.section-title-with-line > div {
+  width: 7rem;
+  height: 24px;
+  margin: 0 10px;
+  border-bottom: 4px ridge whitesmoke;
+  border-radius: 5px;
+}
+.rules-section-title {
+  font-family: universidad, var(--la-font-family-open-sans);
+  font-size: 50px;
+  color: whitesmoke;
+  padding-bottom: 50px;
+}
+/* .rules-section-title > span {
+  width: 20px;
+  height: 1px;
+  border-top: 1px ridge whitesmoke;
+} */
+.rules-container {
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+  cursor: help;
+}
+.rules-card > img {
+  max-width: 300px;
+  height: 450px;
+
+  border: 3px ridge #641f1f;
+  border-radius: 10px;
+
+  -webkit-box-shadow: 2px 2px 20px 13px #641f1f;
+  -moz-box-shadow: 2px 2px 20px 13px #641f1f;
+  box-shadow: 2px 2px 20px 13px black;
+
+  transition: all 0.5s ease;
+}
+
+.rules-card > img:hover {
+  transform: scale(1.2);
+
+  -webkit-box-shadow: 2px 2px 20px 13px #641f1f;
+  -moz-box-shadow: 2px 2px 20px 13px #641f1f;
+  box-shadow: 2px 2px 20px 13px #641f1f;
+}
+
+/*! @MEDIA QUERYS */
+
+/*! 1000 */
+@media screen and (max-width: 1000px) {
+  .section-title-with-line {
+    justify-content: center;
+    gap: 10px;
+  }
+  .section-title-with-line > div {
+    width: 15rem;
+    height: 24px;
+  }
+  .rules-section-title {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+/*! 800 */
+@media screen and (max-width: 800px) {
+  main {
+    padding-top: 60px;
+    margin-top: 140px;
+  }
+  .header-up-container {
+    justify-content: end;
+  }
+  .hot-news-container > p {
+    font-size: 10px;
+    padding-bottom: 10px;
+  }
+  .hot-news-slider {
+    width: 210px;
+    border-radius: 50px;
+
+    opacity: 1;
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left
+          bottom, from(transparent), color-stop(0.7, transparent), to(rgba(0, 0, 0, 0.3)));
+    -webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+    -moz-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+  }
+  .slider-images-container {
+    width: 210px;
+    height: 70px;
+  }
+  .hot-news-image {
+    width: 210px;
+    max-height: 70px;
+  }
+  #full-logo {
+    width: 120px;
+    height: 60px;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    z-index: 2;
+  }
+  header > nav {
+    height: 60px;
+
+    -webkit-box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.75);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.75);
+  }
+  nav > ul > li > a {
+    padding: 0px 14px;
+  }
+  .menu {
+    height: 100%;
+    flex-wrap: wrap;
+
+    font-family: ficticcia-college;
+    font-size: 14px;
+    letter-spacing: 0.05rem;
+    color: rgb(253, 253, 255);
+  }
+  #blue-logo {
+    width: 30px;
+    height: 20px;
+  }
+  .submenu {
+    top: 195px;
+    right: 0px;
+    border-radius: 50px;
+  }
+  section:first-of-type {
+    margin-bottom: 30px;
+  }
+  #red-logo {
+    height: 60px;
+    padding-top: 10px;
+    margin-top: 20px;
+
+    border-top: 5px ridge whitesmoke;
+    border-radius: 10px;
+  }
+  .landing-section-collage h2 {
+    font-size: 30px;
+    border-top: 5px ridge whitesmoke;
+    border-radius: 10px;
+  }
+  .landing-section-collage h2 > span {
+    font-size: 40px;
+  }
+  .landing-section-collage > p {
+    align-self: right;
+    text-align: right;
+    width: 70%;
+
+    font-size: 14px;
+    /* padding-top: 20px; */
+  }
+  #logo-vintage {
+    align-self: center;
+    border-bottom: 5px ridge whitesmoke;
+    border-radius: 10px;
+    rotate: none;
+  }
+  .rules-container {
+    flex-wrap: wrap;
+    gap: 100px;
+  }
+}
+
+/*! 450 */
+@media screen and (max-width: 450px) {
+  #red-logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 30px;
+  }
+  .landing-section-collage {
+    height: 700px;
+  }
+  .landing-section-collage h2 {
+    font-size: 28px;
+  }
+  .landing-section-collage h2 > span {
+    font-size: 40px;
+  }
+  .landing-section-collage > p {
+    font-size: 10px;
+    line-height: 1.5rem;
+    letter-spacing: 0.06rem;
+  }
+  .landing-section-collage > p > span {
+    padding-top: 20px;
+    font-size: 15px;
+    text-shadow: -1px 0 #fff, 0 2px #fff, 1px 0 #fff, 0 1px #fff;
+  }
+  .section-title-with-line > div {
+    width: 15rem;
+    height: 34px;
+  }
+}
+
+/*! BODY */
+/*todo EFECTO ANIMACIÓN FONDO */
+/* body {
+  background: #7cb7f2;
+  font-family: recharge, caslon-antique, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  color: whitesmoke;
+  text-shadow: 2px 4px 9px rgba(69, 66, 66, 0.6);
+} */
+/* .circle {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  animation: ripple 15s infinite;
+  box-shadow: 0px 0px 1px 0px #838383;
+}
+.small {
+  width: 200px;
+  height: 200px;
+  left: -100px;
+  top: -100px;
+}
+.medium {
+  width: 400px;
+  height: 400px;
+  left: -200px;
+  top: -200px;
+}
+.large {
+  width: 600px;
+  height: 600px;
+  left: -300px;
+  top: -300px;
+}
+.xlarge {
+  width: 800px;
+  height: 800px;
+  left: -400px;
+  top: -400px;
+}
+.xxlarge {
+  width: 1000px;
+  height: 1000px;
+  left: -500px;
+  top: -500px;
+}
+.shade1 {
+  opacity: 0.2;
+}
+.shade2 {
+  opacity: 0.5;
+}
+.shade3 {
+  opacity: 0.7;
+}
+.shade4 {
+  opacity: 0.8;
+}
+.shade5 {
+  opacity: 0.9;
+} */
+/* @keyframes ripple {
+  0% {
+    transform: scale(0.8);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+} */
+
+/*! HEADER */
+/*todo GENERAL */
+/* header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background: linear-gradient(
+    335deg,
+    rgba(0, 7, 102, 1) 0%,
+    rgba(74, 55, 251, 1) 52%,
+    rgba(2, 173, 238, 1) 100%
+  );
+  z-index: 5;
+}
+h1 {
+  display: none;
+} */
+
+/*todo HEADER SUPERIOR */
+/* .header-up-container {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  padding-bottom: 40px;
+
+  overflow: hidden;
+} */
+/* .header-up-container > img {
+  width: 250px; */
+/* opacity: 0.8; */
+/* z-index: 2;
+  border-radius: 20px; */
+
+/* margin: 0 25px; */
+/* opacity: 0.8; */
+/* border: 1px solid #ffffff; */
+/* -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(0, 0, 0, 0.1))); */
+
+/* opacity: 1; */
+/* -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(0, 0, 0, 0.4)));
+  -webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+  -moz-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+}*/
+/* .hot-news-container {
+  max-width: 700px;
+  max-height: 200px;
+  gap: 20px;
+  padding: 10px;
+  align-items: center;
+  border-radius: 50px;
+  background-image: url(https://res.cloudinary.com/dd0zwrz0b/image/upload/v1723230466/Liga%20Alarmitas/ce%CC%81sped_azul_girado_j6svli.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  z-index: 2; */
+
+/* -webkit-box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.55);
+  -moz-box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.55);
+  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.55); */
+
+/* margin: 0 25px; */
+/* opacity: 0.8; */
+/* border: 2px solid #eee; */
+/* -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(0, 0, 0, 0.1))); */
+
+/* opacity: 1;
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(0, 0, 0, 0.4)));
+  -webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+  -moz-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+}*/
+/* .hot-news-container:hover {
+  opacity: 1;
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.7, transparent), to(rgba(0, 0, 0, 0.4)));
+  -webkit-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+  -moz-box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+} */
+
+/* .hot-news-container > span {
+  font-size: 3rem;
+  text-shadow: -1px 0 #000000bf, 3px 0 #000000bf, 0 1px #000000bf,
+    0 -1px #000000bf;
+}
+.hot-news-container > p {
+  text-shadow: -1px 0 #000000bf, 3px 0 #000000bf, 0 1px #000000bf,
+    0 -1px #000000bf;
+  color: #fff;
+  font-family: recharge, sans-serif;
+  font-size: 1.8rem;
+  text-align: left;
+}
+.hot-news-container > div {
+  background-color: white;
+  overflow: hidden;
+  border-radius: 50px;
+
+  -webkit-box-shadow: 10px 10px 16px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 16px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 16px 1px rgba(0, 0, 0, 0.75);
+}
+.hot-news-slider {
+  width: 300px;
+  animation: slidering 18s infinite linear;
+}
+.hot-news-slider > li {
+  cursor: auto;
+}
+.hot-news-slider img {
+  max-width: 300px;
+  max-height: 100px;
+} */
+
+/*todo SLIDER (HOT NEWS) EFFECT */
+/*
+@keyframes slidering {
+  0%,
+  23%,
+  100% {
+    margin-left: 0;
+  }
+  28%,
+  38% {
+    margin-left: -100%;
+  }
+  43%,
+  53% {
+    margin-left: -200%;
+  }
+  58%,
+  68% {
+    margin-left: -300%;
+  }
+  73%,
+  83% {
+    margin-left: -400%;
+  }
+  88%,
+  99.9998% {
+    margin-left: -500%;
+  }
+  99.9999% {
+    margin-left: -600%;
+  }
+} */
+
+/*todo HEADER MENU */
+/*? MENU BAR */
+/* #header-up-container-responsive {
+  display: none;
+}
+.menu-container {
+  position: fixed;
+  top: 176px;
+  width: 100%;
+  height: 50px;
+  background: rgb(15, 15, 127);
+  padding: 0px 20px;
+  border-top: 2px solid whitesmoke;
+  border-bottom: 2px solid whitesmoke;
+  padding-bottom: 10px;
+  z-index: 2;
+} */
+/* .menu-container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0) 0%,
+    var(--rtc-background-color-black) 100%
+  );
+  pointer-events: none;
+} */
+/* .menu {
+  margin: auto;
+  height: 100%;
+}
+nav {
+  height: 100%;
+}
+nav > ul {
+  height: 100%;
+  display: flex;
+}
+nav ul li {
+  height: 100%;
+  position: relative;
+}
+nav > ul > li:first-child > a {
+  height: 50px;
+  background-image: url(https://res.cloudinary.com/dd0zwrz0b/image/upload/v1723227930/Liga%20Alarmitas/Logos%20Liga%20Alarmitas/LA_icon_red_xtlqqs.png);
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: 40% 50%;
+  padding: 0 40px;
+}
+nav > ul > li:first-child:hover > a {
+  background-image: url(https://res.cloudinary.com/dd0zwrz0b/image/upload/v1723227930/Liga%20Alarmitas/Logos%20Liga%20Alarmitas/LA_icon_red_xtlqqs.png);
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: 40% 50%;
+  padding: 0 40px;
+}
+nav > ul > li > a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  text-wrap: nowrap;
+  border-radius: 20px;
+  font-size: 12px;
+  transition: all 300ms ease;
+}
+nav > ul > li > a:hover {
+  transform: scale(1.1);
+  background: #0074c7;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+} */
+/* #selected {
+  transform: scale(1.1);
+  background-color: #0074c7;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+} */
+
+/*? SUBMENU BAR */
+/*
+nav ul li ul {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  background: linear-gradient(
+    125deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(224, 231, 255, 1) 52%,
+    rgba(2, 173, 238, 1) 100%
+  );
+  position: absolute;
+  top: 90px;
+  left: -5px;
+  padding: 14px 0px;
+  visibility: hidden;
+  border-radius: 20px;
+  opacity: 0;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  transition: all 300ms ease;
+}
+
+nav ul li:hover ul {
+  visibility: visible;
+  opacity: 1;
+  top: 70px;
+}
+
+nav ul li ul:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid white;
+  position: absolute;
+  top: -12px;
+  left: 20px;
+}
+
+nav ul li ul li a {
+  display: block;
+  color: #0099e9;
+  padding: 6px;
+  padding-left: 14px;
+  margin-top: 10px;
+  font-size: 12px;
+  letter-spacing: 0.05rem;
+  transition: all 300ms ease;
+}
+
+nav ul li ul li a:hover {
+  background: #0074c7;
+  background: linear-gradient(
+    335deg,
+    rgba(0, 7, 102, 1) 0%,
+    rgba(74, 55, 251, 1) 52%,
+    rgba(2, 173, 238, 1) 100%
+  );
+  color: #fff;
+  border-radius: 20px;
+  transform: scale(1.2);
+  padding-left: 30px;
+  font-size: 14px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+} */
+
+/*! MAIN */
+
+/*ARTICULOS*/
+
+/* main {
+  position: relative;
+  background: #7cb7f2;
+  width: auto;
+  margin-top: 225px;
+  padding-top: 50px;
+} */
+
+/* article {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 40px;
+  background: #fff;
+} */
+
+/* article p {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 300;
+} */
+
+/*? RESPONSIVE */
+/* .icon__menu {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin-top: 5px;
+  filter: invert(99%) sepia(12%) saturate(0%) hue-rotate(342deg)
+    brightness(110%) contrast(100%);
+  cursor: pointer;
+}
+#icon__menu__closing {
+  display: none;
+}
+
+#label__check {
+  width: 40px;
+  height: 100%;
+  display: none;
+}
+
+#check__menu {
+  display: none;
+} */
+
+/*todo @MEDIA QUERY */
+/* @media screen and (max-width: 1080px) {
+  .hot-news-container > span {
+    font-size: 1.5rem;
+  }
+  .hot-news-container > p {
+    font-size: 1rem;
+    text-wrap: nowrap;
+  }
+} */
+/* @media screen and (max-width: 940px) {
+  .header-up-container {
+    width: 50%;
+    padding: 0;
+    margin-left: 50px;
+    position: absolute;
+    top: 0px;
+  }
+  .header-up-container > img {
+    width: 80px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 0px;
+    border: none;
+  }
+  .hot-news-container {
+    max-width: 500px;
+    max-height: 40px;
+    gap: 10px;
+    margin: auto;
+
+    -webkit-box-reflect: unset;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  .hot-news-container > span {
+    font-size: 1.25rem;
+  }
+  .hot-news-container > p {
+    font-size: 0.8rem;
+    text-wrap: nowrap;
+  }
+  .hot-news-slider {
+    width: 100px;
+  }
+  .hot-news-container > div {
+    height: 30px;
+    -webkit-box-shadow: 5px 5px 8px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 5px 8px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 5px 5px 8px 1px rgba(0, 0, 0, 0.75);
+  }
+  .hot-news-slider img {
+    max-width: 100px;
+    max-height: 50px;
+  }
+  /*? MENÚ */
+/* .menu-container {
+    height: 60px;
+    max-width: 100vw;
+    top: 0px;
+    border-bottom: none;
+    overflow-x: hidden;
+  }
+  .menu {
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  #header-up-container-responsive {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0px;
+  }
+  #header-up-container {
+    display: none;
+  }
+  nav > ul {
+    flex-direction: column;
+    background: linear-gradient(
+      330deg,
+      rgb(5, 0, 99) 0%,
+      rgb(15, 15, 127) 35%,
+      rgb(33, 185, 255) 100%
+    );
+    position: fixed;
+    left: 0;
+    top: 60px;
+    width: 100vw;
+    height: 0px;
+    padding-top: 2px;
+    border-top: 2px solid whitesmoke;
+    transition: all 300ms ease;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+  }
+  nav > ul > li > a:hover {
+    transform: scale(1);
+  }
+
+  nav ul li ul {
+    left: 50px;
+  }
+
+  nav > ul > li:hover ul {
+    top: 50px;
+  }
+
+  nav > ul > li:first-child a {
+    background-position: 20px;
+  }
+  nav > ul > li:first-child a:hover {
+    background-position: 20px;
+  }
+
+  #selected {
+    transform: scale(1);
+  }
+
+  #label__check {
+    display: block;
+  }
+
+  .icon__menu {
+    display: flex;
+  }
+
+  #check__menu:checked ~ nav > ul {
+    height: 300px;
+    visibility: visible;
+    opacity: 1;
+    padding: 10px 0;
+  }
+
+  #check__menu:checked ~ #label__check #icon__menu__burger {
+    display: none;
+    transition: all 300ms ease;
+  }
+
+  #check__menu:checked ~ #label__check #icon__menu__closing {
+    display: block;
+    transition: all 300ms ease;
+  }
+
+  main {
+    width: 100vw;
+    margin-top: 64px;
+  }
+} */
+
+/* @media screen and (max-width: 450px) {
+  .menu-container {
+    height: 120px;
+  }
+  #header-up-container-responsive {
+    flex-direction: column;
+  }
+  .hot-news-container {
+    position: absolute;
+    top: 60px;
+    margin-left: 5px;
+  }
+} */
