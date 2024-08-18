@@ -658,6 +658,34 @@ section:nth-of-type(2) {
   margin-bottom: 50px;
 }
 
+/*! FOOTER */
+/*todo FOOTER GENERAL */
+footer {
+  width: 100%;
+  padding: 40px;
+  background-color: black;
+  justify-content: space-around;
+  align-items: center;
+}
+footer > div > p {
+  color: gray;
+  font-size: 8px;
+}
+footer > nav > ul {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  filter: invert(99%) sepia(12%) saturate(0%) hue-rotate(342deg)
+    brightness(110%) contrast(100%);
+  cursor: pointer;
+}
+#mortadelo-la {
+  width: 100px;
+}
+
 /*! @MEDIA QUERYS */
 
 /*! 1000 */
@@ -819,6 +847,9 @@ section:nth-of-type(2) {
   .title-section-clasificacion-general > div {
     width: 6rem;
     height: 24px;
+  }
+   #mortadelo-la {
+    width: 75px;
   }
 }
 
