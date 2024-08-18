@@ -642,6 +642,16 @@ section:nth-of-type(2) {
   box-shadow: 2px 2px 20px 13px #641f1f;
 }
 
+/*todo CLAS. GENERAL SECTION */
+#clasificacion-general > div:last-of-type {
+  justify-content: center;
+}
+.clasificacion-general {
+  width: 98%;
+
+  margin-bottom: 50px;
+}
+
 /*! @MEDIA QUERYS */
 
 /*! 1000 */
@@ -796,6 +806,13 @@ section:nth-of-type(2) {
   .section-title-with-line > div {
     width: 15rem;
     height: 34px;
+  }
+  .title-section-clasificacion-general > h3 {
+    font-size: 24px;
+  }
+  .title-section-clasificacion-general > div {
+    width: 6rem;
+    height: 24px;
   }
 }
 
